@@ -16,8 +16,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        display(1);
-        displayPrice(5);
+        int numberOfCoffees = 5;
+        display(numberOfCoffees);
+        displayPrice(numberOfCoffees * 5);
     }
 
     private void display(int number) {
@@ -28,5 +29,15 @@ public class MainActivity extends AppCompatActivity {
     private void displayPrice (int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+    }
+
+    public void increment(View view) {
+        int quantity = 3;
+        display(quantity);
+    }
+
+    public void decrement(View view) {
+        int quantity = 1;
+        display(quantity);
     }
 }
