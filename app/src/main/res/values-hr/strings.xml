@@ -3,4 +3,11 @@
     <string name="toppings">Dodaci</string>
     <string name="thank_you">Hvala!</string>
     <string name="order_summary_name">Ime: <xliff:g id="name" example="Amy">%s</xliff:g></string>
+    <string name="your_name">Tvoje ime</string>
+    <string name="whipped_cream">Slag</string>
+    <string name="chocolate">Cokolada</string>
+    <string name="quantity">Kolicina</string>
+    <string name="total_0">Ukupno: $0</string>
+    <string name="order">naruci</string>
+    <string name="add_whipped_cream">Dodati vrhnje? %s</string>
 </resources>
