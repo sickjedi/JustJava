@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
         boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
 
-        Log.v("MainActivity", "Has whipped cream: " + hasWhippedCream);
         String priceMessage = createOrderSummary(price, hasWhippedCream);
         displayMessage(priceMessage);
     }
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
      * Create summary of the order
      *
      * @param orderSum price sum of order
-     * @param hasWhippedCream
+     * @param hasWhippedCream order has whipped cream
      * @return text summary
      */
 
