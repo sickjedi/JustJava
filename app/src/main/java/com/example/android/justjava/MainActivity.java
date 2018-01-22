@@ -12,6 +12,8 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
     int quantity = 0;
+    boolean hasWhippedCream;
+    boolean hasChocolate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +22,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        int price = calculatePrice();
         CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
         CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_checkbox);
         EditText nameField = (EditText) findViewById(R.id.name_field);
 
-        boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
-        boolean hasChocolate = chocolateCheckBox.isChecked();
+        hasWhippedCream = whippedCreamCheckBox.isChecked();
+        hasChocolate = chocolateCheckBox.isChecked();
+
+        int price = calculatePrice();
+
         String name = nameField.getText().toString();
 
         String priceMessage = createOrderSummary(price, hasWhippedCream, hasChocolate, name);
@@ -50,7 +54,14 @@ public class MainActivity extends AppCompatActivity {
      * Calculates the price of the order.
      */
     private int calculatePrice() {
-        return quantity * 5;
+        int price = 5;
+
+        if (hasWhippedCream)
+            price = price + 1;
+        if (hasChocolate)
+            price = price + 2;
+
+        return quantity * price;
     }
 
     /**
