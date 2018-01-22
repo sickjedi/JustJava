@@ -77,12 +77,12 @@ public class MainActivity extends AppCompatActivity {
      */
 
     private String createOrderSummary(int orderSum, boolean hasWhippedCream, boolean hasChocolate, String name) {
-        return "Name: " + name + "\n" +
+        return getString(R.string.order_summary_name, name) +
                 "Add whipped cream? " + hasWhippedCream + "\n" +
                 "Add chocolate? " + hasChocolate + "\n" +
                 "Quantity: " + quantity + "\n" +
                 "Total $" + orderSum + "\n" +
-                "Thank you!";
+                getString(R.string.thank_you);
     }
 
     public void increment(View view) {
