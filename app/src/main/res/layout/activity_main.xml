@@ -19,8 +19,6 @@
             android:inputType="textCapWords"
             android:padding="8dp"/>
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:padding="8dp"
             android:text="@string/toppings"
             style="@style/HeaderTextStyle"
@@ -44,8 +42,6 @@
             android:padding="8dp"
             />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:padding="8dp"
             android:text="@string/quantity"
             style="@style/HeaderTextStyle" />
